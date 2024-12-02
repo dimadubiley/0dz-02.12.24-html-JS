@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let car = 
+        {
+            date: 1934,
+            mark: "BMW",
+            color: "red",
+            maxSpeed: "200km",
+            maxPass: 4,
+            display: function () 
+            {
+                document.write(this.date +"<br/>");
+                document.write(this.mark + "<br/>");
+                document.write(this.color + "<br/>");
+                document.write(this.maxSpeed + "<br/>");
+                document.write(this.maxPass + "<br/>");
+            }
+        }
+        car.display();
+        
+        let ser = JSON.stringify(car);
+        document.write("<br/>");
+        document.write(ser + "<br/>");
+
+s
+        let des = JSON.parse(ser);
+        car.display = function () 
+            {
+                document.write(this.date +"<br/>");
+                document.write(this.mark + "<br/>");
+                document.write(this.color + "<br/>");
+                document.write(this.maxSpeed + "<br/>");
+                document.write(this.maxPass + "<br/>");
+            }
+    </script>
+</body>
+</html>
